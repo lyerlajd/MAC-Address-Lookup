@@ -1,0 +1,74 @@
+:root {
+    --primary: rgba(28, 28, 28, 60%);
+    --secondary: #fff;
+    --yellow: #fdb913;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100dvh;
+    background: #600C9D;
+    background: radial-gradient(circle, rgba(96, 12, 157, 1) 0%, rgba(0, 23, 96, 1) 50%);
+    color: var(--secondary);
+    font-family: sans-serif;
+    gap: 2rem;
+}
+
+h1 {
+    margin-top: 2rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    justify-items: center;
+    gap: 1rem 2rem;
+}
+
+textarea {
+    border-radius: 0.5rem;
+    padding: 0.25rem 1rem;
+    height: clamp(3rem, 5rem, 15rem);
+    width: 20dvw;
+    min-width: 15rem;
+    resize: none;
+
+    background-color: rgba(255, 255, 255, 80%);
+}
+
+div.mac-info-area {
+    width: 100%;
+    max-width: 45dvw;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+/* textarea:focus {
+    outline: none;
+    border: 0.25em solid #00ff00;
+} */
+
+.button {
+    background-color: rgba(0, 23, 96, 1);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid rgba(255, 255, 255, 40%);
+}
+.button:hover {
+    background-color: rgba(96, 12, 157, 1);
+}
+.button:focus, .button:active {
+    background-color: var(--yellow);
+    color: rgba(96, 12, 157, 1);
+}
