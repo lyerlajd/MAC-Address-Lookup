@@ -1,11 +1,17 @@
 const textarea = document.querySelector('textarea');
 const mac_info_area = document.querySelector('.mac-info-area');
+const search_button = document.querySelector('div.button');
 
 textarea.addEventListener('keydown', (e) => {
     if(e.ctrlKey && e.key === 'Enter') {
         console.log('running mac_lookup');
         mac_lookup();
     }
+});
+
+search_button.addEventListener('click', () => {
+    console.log('running mac_lookup');
+    mac_lookup();
 });
 
 async function get_mac_info(mac) {
@@ -136,4 +142,5 @@ async function mac_lookup() {
     }).join('');
 
     // oui: ${oui}<br>company: ${company}<br>address: ${address}
+
 }
